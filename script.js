@@ -59,4 +59,5 @@ function cancella_elemento(utente_da_cancellare){
     }
 }
 
+//assegno al button l'onclick
 document.querySelectorAll('body button')[0].onclick = () => salva_utente(prendi_input())
