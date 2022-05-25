@@ -34,17 +34,16 @@ function mostra_utente(utente){
     const elemento_bottone = document.createElement('button')
     elemento_bottone.onclick = () => cancella_elemento(utente)
 
-    elemento_bottone.innerHTML = 'cancella'
     elemento_nome.innerText = utente.nome
     elemento_cognome.innerText = utente.cognome
     elemento_citta.innerText = utente.citta
+    elemento_bottone.innerHTML = 'cancella'
 
     elemento_div.appendChild(elemento_nome)
     elemento_div.appendChild(elemento_cognome)
     elemento_div.appendChild(elemento_citta)
     elemento_div.appendChild(elemento_bottone)
 
-    console.log(document.querySelector('body'))
     document.querySelector('body').appendChild(elemento_div)
 }
 
@@ -53,7 +52,7 @@ function cancella_elemento(utente_da_cancellare){
     for (const key of array_users) {
         if (utente_da_cancellare === key){
             const index_div_da_cancellare = array_users.indexOf(key)
-            array_users.pop(key)
+            array_users.splice(index_div_da_cancellare, 1)
             document.querySelectorAll('body div')[index_div_da_cancellare].remove()
         }
     }

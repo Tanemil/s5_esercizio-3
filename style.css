@@ -1,6 +1,9 @@
-body > div{
+body div{
     display: flex;
     align-items: center;
     justify-items: center;
-    margin: 1rem 2rem;
+}
+
+body div p , body div button{
+    margin: 1rem 2rem; 
 }
