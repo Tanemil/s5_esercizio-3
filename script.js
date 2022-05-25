@@ -13,7 +13,6 @@ function prendi_input(){
     const n_input = document.querySelectorAll('body input')
     let risultato = []
     for (const key of n_input) {
-        console.log(key)
         risultato.push(key.value)
     }
     return risultato
@@ -35,6 +34,7 @@ function mostra_utente(utente){
     const elemento_bottone = document.createElement('button')
     elemento_bottone.onclick = () => cancella_elemento(utente)
 
+    elemento_bottone.innerHTML = 'cancella'
     elemento_nome.innerText = utente.nome
     elemento_cognome.innerText = utente.cognome
     elemento_citta.innerText = utente.citta
